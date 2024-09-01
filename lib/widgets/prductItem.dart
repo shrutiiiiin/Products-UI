@@ -11,8 +11,9 @@ class ProdItem extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white, // White background for the whole container
-          borderRadius: BorderRadius.only(
+          color: const Color.fromRGBO(
+              255, 255, 255, 1), // White background for the whole container
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular(12),
             bottomRight: Radius.circular(12),
             topLeft: Radius.circular(12),
@@ -23,7 +24,7 @@ class ProdItem extends StatelessWidget {
               color: Colors.black12.withOpacity(0.1),
               spreadRadius: 0.5,
               blurRadius: 2,
-              offset: Offset(0, 1), // Shadow position
+              offset: const Offset(0, 1), // Shadow position
             ),
           ],
         ),
@@ -39,7 +40,7 @@ class ProdItem extends StatelessWidget {
                     Container(
                       width: double.infinity,
                       height: 120,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFF9F9F9),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(12),
@@ -49,7 +50,7 @@ class ProdItem extends StatelessWidget {
                     ),
                     Positioned.fill(
                         child: ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(12),
                         bottomLeft: Radius.circular(12),
                       ),
@@ -83,7 +84,7 @@ class ProdItem extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Expanded(
               flex: 1,
               child: Stack(

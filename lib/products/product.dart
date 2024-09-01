@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_1/products/product_details.dart';
 import 'package:test_1/widgets/prductItem.dart';
 
 class ProductPage extends StatefulWidget {
@@ -19,12 +20,12 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF9F9F9),
+      backgroundColor: const Color(0xFFF9F9F9),
       appBar: AppBar(
           toolbarHeight: 110,
-          backgroundColor: Color(0xFFF9F9F9),
-          title: Padding(
-            padding: const EdgeInsets.only(left: 12),
+          backgroundColor: const Color(0xFFF9F9F9),
+          title: const Padding(
+            padding: EdgeInsets.only(left: 12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -49,11 +50,17 @@ class _ProductPageState extends State<ProductPage> {
       body: ListView.builder(
         itemCount: 5,
         itemBuilder: (context, index) {
-          return ProdItem();
+          return InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ProductDetails()));
+            },
+            child: const ProdItem(),
+          );
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -69,6 +76,9 @@ class _ProductPageState extends State<ProductPage> {
         unselectedItemColor:
             Colors.black26, // Set unselected item color to white
         backgroundColor: Colors.black,
+        unselectedLabelStyle: TextStyle(
+          color: Colors.black,
+        ),
         onTap: _onItemTapped,
       ),
     );
