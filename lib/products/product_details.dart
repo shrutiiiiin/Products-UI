@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ProductDetails extends StatelessWidget {
-  ProductDetails({super.key});
+  const ProductDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +13,7 @@ class ProductDetails extends StatelessWidget {
       'assets/images/imagedress.png',
     ];
     return Scaffold(
+        backgroundColor: Color(0xFFF9F9F9),
         appBar: AppBar(
           actions: const [
             IconButton(
@@ -112,6 +113,40 @@ class ProductDetails extends StatelessWidget {
                         fontWeight: FontWeight.w500),
                   ),
                 ],
+              ),
+            ),
+            const Spacer(),
+            Material(
+              elevation: 5,
+              child: Container(
+                height: 90,
+                width: double.infinity,
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Material(
+                    elevation: 4,
+                    borderRadius: BorderRadius.circular(30),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.red,
+                      ),
+                      width: 120,
+                      height: 10,
+                      child: const Center(
+                        child: Text(
+                          'ADD TO CART',
+                          style: TextStyle(
+                              fontFamily: 'Lato',
+                              fontSize: 18,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             )
           ],
