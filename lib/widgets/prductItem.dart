@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ProdItem extends StatelessWidget {
-  const ProdItem({
+  final String imagePath;
+  ProdItem({
     super.key,
+    required this.imagePath,
   });
 
   @override
@@ -54,8 +56,7 @@ class ProdItem extends StatelessWidget {
                         topLeft: Radius.circular(12),
                         bottomLeft: Radius.circular(12),
                       ),
-                      child: Image.asset('assets/images/image 2.png',
-                          fit: BoxFit.cover),
+                      child: Image.asset((imagePath), fit: BoxFit.cover),
                     )),
                     Positioned(
                       top: 10,

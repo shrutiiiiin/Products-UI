@@ -19,6 +19,13 @@ class _ProductPageState extends State<ProductPage> {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> photo = [
+      'assets/images/img1.png',
+      'assets/images/image 2.png',
+      'assets/images/image 3.png',
+      'assets/images/image 4.png',
+      'assets/images/img1.png',
+    ];
     return Scaffold(
       backgroundColor: const Color(0xFFF9F9F9),
       appBar: AppBar(
@@ -55,7 +62,9 @@ class _ProductPageState extends State<ProductPage> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => ProductDetails()));
             },
-            child: const ProdItem(),
+            child: ProdItem(
+              imagePath: photo[index],
+            ),
           );
         },
       ),
