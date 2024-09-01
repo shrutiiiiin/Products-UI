@@ -54,7 +54,7 @@ class ProdItem extends StatelessWidget {
                         topLeft: Radius.circular(12),
                         bottomLeft: Radius.circular(12),
                       ),
-                      child: Image.asset('assets/images/img1.png',
+                      child: Image.asset('assets/images/image 2.png',
                           fit: BoxFit.cover),
                     )),
                     Positioned(
