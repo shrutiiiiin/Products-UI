@@ -53,7 +53,7 @@ class _ProductPageState extends State<ProductPage> {
           return InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ProductDetails()));
+                  MaterialPageRoute(builder: (context) => ProductDetails()));
             },
             child: const ProdItem(),
           );
@@ -76,7 +76,7 @@ class _ProductPageState extends State<ProductPage> {
         unselectedItemColor:
             Colors.black26, // Set unselected item color to white
         backgroundColor: Colors.black,
-        unselectedLabelStyle: TextStyle(
+        unselectedLabelStyle: const TextStyle(
           color: Colors.black,
         ),
         onTap: _onItemTapped,

@@ -119,10 +119,10 @@ class ProdItem extends StatelessWidget {
                                 },
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 3,
                             ),
-                            Text(
+                            const Text(
                               '(10)',
                               style: TextStyle(
                                   fontFamily: 'Lato',
@@ -132,22 +132,22 @@ class ProdItem extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Text(
+                        const Text(
                           'Dorothy Perkins',
                           style: TextStyle(
                               fontSize: 12,
                               color: Colors.black26,
                               fontWeight: FontWeight.w600),
                         ),
-                        Text(
+                        const Text(
                           'Evening Dress',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 8),
-                        Row(
+                        const SizedBox(height: 8),
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
